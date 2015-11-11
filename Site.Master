@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DbMusic.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Home Page</title>
+    <style>
+        a {
+            text-decoration:none;
+        }
+        BODY {
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana;
+            font-size: 16px;
+        }
+        h1 {
+            font-family:cursive; 
+            text-align: left;
+            color: darkblue;
+            font-size: 30px;
+            height: 10px;
+            padding: 30px 20px;
+            margin: 0px;
+        }
+
+        h2 {
+            font-family:KaiTi;
+            font-stretch:extra-expanded;
+            font-size:35px;
+            text-align: center;
+            color: white;
+            height: 10px;
+            padding:30px 30px 0 0;
+            margin: 0px;
+        }
+
+        h3 {
+            color: CaptionText;
+            margin: 0px;
+        }
+         h4 {
+            font-family:Jokerman;
+            font-stretch:expanded;
+            font-size:25px;
+            text-align: center;
+            color: white;
+            height: 10px;
+            padding: 30px 0px;
+            margin: 0px;
+        }
+
+        #Button1 {
+            font-size: 100%;
+            font: bold;
+        }
+
+        #b1 {
+            font-size: 100%;
+            font: bold;
+        }
+        /* Main menu
+------------------------------------------*/
+        #coolMenu {
+            font-family: 'Lucida Sans Unicode';
+            font-size: 15px;
+            background: #4a2e2e; /*#333399;*/ /*#6666CC;*/ /*#2f8be8*/
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%; /*850px*/
+            margin: 0px;
+            padding:0px;
+        }
+
+            #coolMenu > li {
+                display: inline-block;
+            }
+
+        .hyperlink {
+            padding: 5px 0px 0px 25px;
+            text-decoration: none;
+            height: 25px;
+        }
+
+        #coolMenu li a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #coolMenu > li:hover > a {
+            color: #f09d28;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div>
+        <table align="center" width="95%" style="max-width: 1400px;" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td style="width: 200px;">
+                                <h1>Muzik DB</h1>                                
+                            </td>                            
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="margin: 20px;">
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td>
+                                <ul id="coolMenu">
+                                    <li class="hyperlink">
+                                        <asp:HyperLink ID="HyperLink" runat="server" Text="Home" NavigateUrl="~/Home.aspx"></asp:HyperLink>
+                                    </li>
+                                    <li class="hyperlink">
+                                        <asp:HyperLink ID="HyperLink4" runat="server" Text="Search By Period" NavigateUrl="~/Period.aspx"></asp:HyperLink>
+                                    </li>
+                                     <li class="hyperlink">
+                                        <asp:HyperLink ID="HyperLink6" runat="server" Text="Search By Artists" NavigateUrl="~/ArtistSearch.aspx"></asp:HyperLink>
+                                    </li>
+                                    <li class="hyperlink">
+                                        <asp:HyperLink ID="HyperLink2" runat="server" Text="Artist Biography" NavigateUrl="~/ArtistBiography.aspx"></asp:HyperLink>
+                                    </li>
+                                    <li class="hyperlink">
+                                        <asp:HyperLink ID="HyperLink1" runat="server" Text="Song Statistics" NavigateUrl="~/SongStatistics.aspx"></asp:HyperLink>
+                                    </li>
+                                   
+                                    
+                                    <li class="hyperlink">
+                                        <asp:HyperLink ID="HyperLink3" runat="server" Text="About Us" NavigateUrl="~/AboutUs.aspx"></asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form id="form1" runat="server" style="min-height:400px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td>
+                                <footer style="text-align: center; background: #4a2e2e; font-family:  'Comic Sans MS'; color: white; height: 110px; padding: 1px 0px 5px 0px; border-bottom-left-radius: 18px; border-bottom-right-radius: 18px;">
+                                    <p>
+                                        
+                                        Copyright <span style="font-family: Kartika;">&copy; </span>2015, Muzik DB. All Rights Reserved.<br />
+                                        Use of this service is subject to Terms of Use, Privacy & Cookies Policy.
+                                        <br />
+                                        MZKdB <span style="font-family: Arial;">&reg; </span>is a registered trademark of MuzikDB, Inc.
+                                    </p>
+                                </footer>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
